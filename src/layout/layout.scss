@@ -1,0 +1,31 @@
+@import "../responsive.scss";
+
+.layout {
+  // background-color: rgba(102, 51, 153, 0.184);
+  height: 100vh;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include lg {
+    // background-color: rgba(128, 128, 128, 0.41);
+    max-width: 1280px;
+  }
+  @include md {
+    // background-color: rgba(0, 128, 0, 0.286);
+    max-width: 768px;
+  }
+  @include sm {
+    // background-color: rgba(255, 0, 0, 0.36);
+    max-width: 640px;
+  }
+
+  .content {
+    // background-color: purple;
+    height: calc(100vh - 100px);
+  }
+}
