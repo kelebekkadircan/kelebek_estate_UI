@@ -1,7 +1,6 @@
 import "./map.scss";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { Link } from "react-router-dom";
 import Pin from "../pin";
 
 export const Map = ({ items }) => {

@@ -1,8 +1,6 @@
-import { Home } from "./pages";
+import { Home, List, Single, Profile } from "./pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { List } from "./pages/list";
 import { Layout } from "./layout";
-import { Single } from "./pages/single";
 
 function App() {
   const router = createBrowserRouter([
@@ -10,11 +8,21 @@ function App() {
       path: "/",
       element: <Layout />,
       children: [
-        { path: "/", element: <Home /> },
-        { path: "/list", element: <List /> },
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/list",
+          element: <List />,
+        },
         {
           path: "/:id",
           element: <Single />,
+        },
+        {
+          path: "/profile",
+          element: <Profile />,
         },
       ],
     },
